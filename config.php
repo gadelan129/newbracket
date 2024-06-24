@@ -14,7 +14,7 @@ if (!file_exists($ssl_cert_path)) {
 mysqli_ssl_set($db, NULL, NULL, $ssl_cert_path, NULL, NULL);
 
 // Establish the connection using SSL
-if (!mysqli_real_connect($serverko, "serverko.mysql.database.azure.com", "bracketadmin", "KwekkwekNiAlingKwekwek123!", "server", 3306, NULL, MYSQLI_CLIENT_SSL)) {
+if (!mysqli_real_connect($db, "serverko.mysql.database.azure.com", "bracketadmin", "KwekkwekNiAlingKwekwek123!", "server", 3306, NULL, MYSQLI_CLIENT_SSL)) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
